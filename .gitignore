@@ -1,3 +1,13 @@
+# Ignore dependencies for both sides
 backend/node_modules/
 frontend/node_modules/
+
+# Ignore environment variables and secrets
 backend/.env
+.env
+
+# Ignore build files (if using Vite/React)
+frontend/dist/
+
+# System files
+.DS_Store
