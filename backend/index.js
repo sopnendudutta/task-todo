@@ -3,10 +3,13 @@ const app = express();
 const { createTodo } = require("./types");
 const { updateTodo } = require("./types");
 const { todo } = require("./db");
+const cors = require("cors");
+
 console.log("Database URL Check:", process.env.MONGODB_URL ? "Found" : "Not Found");
 
 app.use(express.json());
 const PORT = 3000;
+app.use(cors());
 
 app.post('/todo', async function (req, res) {
     const createPayload = req.body;
